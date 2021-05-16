@@ -1,9 +1,9 @@
 import { HashRouter } from "react-router-dom";
 import React from "react";
-import Router from "../Routes";
+import { MainRouter } from "../Routes";
 
 export default (props) => (
   <HashRouter>
-    <Router />
+    <MainRouter />
   </HashRouter>
 );

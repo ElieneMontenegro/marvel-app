@@ -8,10 +8,19 @@ import Characters from "./components/Characters";
 import Movies from "./components/Movies";
 import HQs from "./components/HQs";
 
-export default (props) => (
+export const MainRouter = (props) => (
   <Switch>
     <Route exact path="/" component={Login} />
-    <Route path="/chars" component={Home} />
+    <Route path="/home" component={Home} />
     <Redirect from="*" to="/login" />
   </Switch>
 );
+
+export const NavRouter = () => {
+  <Switch>
+    <Route path="/chars" component={Characters} />
+    <Route path="/movies" component={Movies} />
+    <Route path="/hqs" component={HQs} />
+    <Redirect from="*" to="/login" />
+  </Switch>;
+};

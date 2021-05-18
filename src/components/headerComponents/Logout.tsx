@@ -3,7 +3,7 @@ import profilePicture from "../../assets/images/profile-picture.png";
 import "./Logout.css";
 import { Link } from "react-router-dom";
 
-export default (props) => (
+export default () => (
   <div className="logout-section">
     <img
       src={profilePicture}

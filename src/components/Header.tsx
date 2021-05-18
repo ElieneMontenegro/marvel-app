@@ -4,7 +4,7 @@ import Logo from "./headerComponents/Logo";
 import Nav from "./headerComponents/Nav";
 import Logout from "./headerComponents/Logout";
 
-export default (props) => (
+export default () => (
   <div className="header">
     <Logo />
     <Nav />

@@ -4,7 +4,7 @@ import React from "react";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 
-export default (props) => (
+export default () => (
   <Switch>
     <Route exact path="/" component={Login} />
     <Route path="/home" component={Home} />

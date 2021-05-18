@@ -1,25 +1,26 @@
 import React, { useEffect, useState } from "react";
-import "./InfoPage.css";
-import Card from "./Card";
+import "../assets/styles/InfoPage.css";
 import BigCard from "./BigCardChars";
+import Card from "./Card";
 
-import { characters as info } from "../utils/info";
+import { characters as cards } from "../utils/info";
 
 import rightArrow from "../assets/images/arrow.png";
+import { PopupInfo } from "../interfaces";
 
 export default () => {
   const [count, setCount] = useState(0);
   const [popup, setPopup] = useState(false);
-  const [popupInfo, setPopupInfo] = useState();
+  const [popupInfo, setPopupInfo] = useState({});
 
-  const showPopup = (item) => {
+  const showPopup = (item: PopupInfo) => {
     setPopupInfo(item);
     setPopup(true);
   };
 
   return (
     <div className="chars">
-      {info.length > count + 1 && (
+      {cards.length > count + 1 && (
         <button className="right-scroll" onClick={() => setCount(count + 1)}>
           <img src={rightArrow} alt="button-to-scroll-right" />
         </button>
@@ -32,7 +33,7 @@ export default () => {
         />
       )}
       <div className="image-scroller">
-        {info
+        {cards
           .map((item) => (
             <Card
               onClick={() => showPopup(item)}

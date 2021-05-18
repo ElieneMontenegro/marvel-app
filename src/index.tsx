@@ -1,5 +1,5 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import * as React from "react";
+import * as ReactDOM from "react-dom";
 import App from "./main/App";
 import "./index.css";
 import "./assets/fonts/Marvel/MarvelRegular-Dj83.ttf";
@@ -24,9 +24,4 @@ import "./assets/fonts/Kastelov/Kastelov - Axiforma SemiBold.otf";
 import "./assets/fonts/Kastelov/Kastelov - Axiforma Thin Italic.otf";
 import "./assets/fonts/Kastelov/Kastelov - Axiforma Thin.otf";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById("root"));

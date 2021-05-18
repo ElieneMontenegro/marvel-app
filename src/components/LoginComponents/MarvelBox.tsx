@@ -1,7 +1,7 @@
 import React from "react";
 import "./MarvelBox.css";
 
-export default (props) => (
+export default () => (
   <div className="box">
     <span className="marvel">MARVEL</span>
   </div>
